@@ -1,11 +1,13 @@
 import Image from "next/image"
 import { Mail, Github, Linkedin, FileText } from "lucide-react"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 const socialLinks = [
   { icon: Mail, href: "mailto:dlee23@uw.edu", label: "Email" },
   { icon: Github, href: "https://github.com/otthree", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/dae-hyun-lee-1a9461254/", label: "LinkedIn" },
-  { icon: FileText, href: "/cv.pdf", label: "CV" },
+  { icon: FileText, href: `${basePath}/cv.pdf`, label: "CV" },
 ]
 
 export function ProfileSection() {
@@ -13,7 +15,7 @@ export function ProfileSection() {
     <section id="about" className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
       <div className="shrink-0">
         <Image
-          src="/images/dhlee.JPG"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/dhlee.JPG`}
           alt="Profile photo"
           width={180}
           height={180}
