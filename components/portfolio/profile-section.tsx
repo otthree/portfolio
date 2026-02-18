@@ -38,18 +38,17 @@ export function ProfileSection() {
         </p>
 
         <p className="mt-5 text-sm leading-relaxed text-foreground/85">
-          I am a graduate student in Data Science at the University of Washington,
-          working as a Researcher at Roy Lab. My research focuses on designing deep
-          learning frameworks to operationalize cognitive reserve from multimodal
-          neuroimaging data, addressing the fundamental challenge of quantifying
-          latent cognitive resilience from observable clinical markers.
+        I am a data science researcher with formal training in mathematics and engineering, 
+        currently completing a Master’s in Data Science at the University of Washington. 
+        My research focuses on predictive modeling and statistical learning, 
+        with an emphasis on principled model design and empirical validation.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-foreground/85">
-          I received my B.A. in Mathematics from the University of Washington in 2025.
-          I previously interned at SNU VLDB Lab, Seoul National University, where I
-          proposed and validated a z-score-based dimension reduction technique for
-          embedding vectors, achieving 96% dimensionality reduction while preserving
-          95%+ similarity accuracy.
+        I work extensively with PyTorch to build, optimize, 
+        and analyze machine learning models across diverse data modalities, 
+        including structured data and complex feature spaces. 
+        I am particularly interested in model interpretability, 
+        uncertainty-aware learning, and bridging machine learning theory with practical analytical systems used in applied research and decision-making contexts.
         </p>
 
         <div className="mt-5 flex items-center gap-3">
