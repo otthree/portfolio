@@ -4,6 +4,7 @@ import { ResearchInterests } from "@/components/portfolio/research-interests"
 import { NewsSection } from "@/components/portfolio/news-section"
 import { PublicationsSection } from "@/components/portfolio/publications-section"
 import { ProjectsSection } from "@/components/portfolio/projects-section"
+import { AwardsSection } from "@/components/portfolio/awards-section"
 import { EducationSection } from "@/components/portfolio/education-section"
 import { Footer } from "@/components/portfolio/footer"
 import { Separator } from "@/components/ui/separator"
@@ -20,6 +21,8 @@ export default function HomePage() {
         <NewsSection />
         <Separator />
         <PublicationsSection />
+        <Separator />
+        <AwardsSection />
         <Separator />
         <ProjectsSection />
         <Separator />

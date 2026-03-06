@@ -1,7 +1,7 @@
 const newsItems = [
   {
     date: "2026.02",
-    content: "Won 1st Place at Databricks x UW Hackathon with TerraCast, a county-level crop yield prediction system.",
+    content: "Awarded 1st Place at Databricks x UW Hackathon with TerraCast, a county-level crop yield prediction system.",
   },
   {
     date: "2025.12",
