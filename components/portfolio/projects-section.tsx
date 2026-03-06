@@ -10,6 +10,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "TerraCast — Databricks x UW Hackathon (1st Place)",
+    description:
+      "Designed and led the end-to-end LightGBM modeling pipeline for county-level corn/soybean yield prediction. Applied domain-informed preprocessing including yield detrending to isolate weather effects from long-term agricultural trends. Integrated Databricks Genie for natural-language querying of predictions and data insights.",
+    tags: ["LightGBM", "Databricks", "Feature Engineering", "EDA"],
+    link: "https://devpost.com/software/terracast",
+  },
+  {
     title: "NFL Player Trajectory Prediction - Framework Comparison",
     description:
       "Implemented structurally equivalent GRU-based encoder-decoder models in PyTorch and TensorFlow for NFL player trajectory prediction. Conducted rigorous comparative analysis revealing significant autoregressive inference divergence despite structural equivalence (PyTorch RMSE: 1.55 vs TensorFlow: 19.47 on validation set). Authored technical report contextualizing empirical findings with established literature on exposure bias and error accumulation.",
