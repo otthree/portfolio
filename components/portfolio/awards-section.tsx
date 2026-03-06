@@ -9,7 +9,7 @@ const awards: Award[] = [
   {
     title: "1st Place — Databricks x UW Hackathon",
     org: "University of Washington",
-    date: "Feb 2026",
+    date: "2026. 02",
     link: "https://devpost.com/software/terracast",
   },
 ]
