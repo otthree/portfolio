@@ -10,7 +10,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "TerraCast — Databricks x UW Hackathon (1st Place)",
+    title: "TerraCast -- Databricks x UW Hackathon (1st Place)",
     description:
       "Designed and led the end-to-end LightGBM modeling pipeline for county-level corn/soybean yield prediction. Applied domain-informed preprocessing including yield detrending to isolate weather effects from long-term agricultural trends. Integrated Databricks Genie for natural-language querying of predictions and data insights.",
     tags: ["LightGBM", "Databricks", "Feature Engineering", "EDA"],
