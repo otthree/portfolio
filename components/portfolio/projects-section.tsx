@@ -17,6 +17,13 @@ const projects: Project[] = [
     link: "https://devpost.com/software/terracast",
   },
   {
+    title: "Smart Skincare - Personalized Skincare Recommendation Tool",
+    description:
+      "Built an interactive, ingredient-based recommendation tool that matches skincare products to user skin type/concerns and blends ingredient compatibility with real review signals. Includes a simple web UI and a reproducible pipeline with tests and CI; deployed via GitHub Pages.",
+    tags: ["Python", "Recommendation Systems", "EDA", "CI/CD"],
+    link: "https://github.com/JungmoonHa/Data515_SmartSkincare",
+  },
+  {
     title: "NFL Player Trajectory Prediction - Framework Comparison",
     description:
       "Implemented structurally equivalent GRU-based encoder-decoder models in PyTorch and TensorFlow for NFL player trajectory prediction. Conducted rigorous comparative analysis revealing significant autoregressive inference divergence despite structural equivalence (PyTorch RMSE: 1.55 vs TensorFlow: 19.47 on validation set). Authored technical report contextualizing empirical findings with established literature on exposure bias and error accumulation.",
