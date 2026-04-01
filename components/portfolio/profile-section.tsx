@@ -38,18 +38,16 @@ export function ProfileSection() {
         </p>
 
         <p className="mt-5 text-sm leading-relaxed text-foreground/85">
-        I am a data science researcher with formal training in mathematics and engineering, 
-        currently completing a Master’s in Data Science at the University of Washington. 
-        My research focuses on predictive modeling and statistical learning, 
-        with an emphasis on principled model design and empirical validation.
+        I am a Master's student in Data Science at the University of Washington with research interests spanning machine learning and deep learning. 
+        My work is driven by a long-term goal of becoming a research scientist who develops principled learning systems that generalize across domains and scales.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-foreground/85">
-        I work extensively with PyTorch to build, optimize, 
-        and analyze machine learning models across diverse data modalities, 
-        including structured data and complex feature spaces. 
-        I am particularly interested in model interpretability, 
-        uncertainty-aware learning, and bridging machine learning theory with practical analytical systems used in applied research and decision-making contexts.
+        Currently, I am conducting research on neuroimaging and cognitive aging, focusing on operationalizing cognitive reserve using deep learning on structural brain MRI. My pipeline spans 3D CNN-based Alzheimer's disease classification, residual-based cohort identification, and causal graph construction.
         </p>
+        <p className="mt-3 text-sm leading-relaxed text-foreground/85">
+        I work primarily in PyTorch and am interested in the intersection of representation learning, causal inference, and clinical neuroscience. More broadly, I am drawn to problems where rigorous statistical modeling can surface structure in high-dimensional biomedical data.
+        </p>
+        
 
         <div className="mt-5 flex items-center gap-3">
           {socialLinks.map((link) => (
