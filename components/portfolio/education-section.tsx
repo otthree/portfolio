@@ -15,7 +15,7 @@ const education = [
 
 const experience = [
   {
-    role: "Researcher",
+    role: "Research Assistant",
     org: "Roy Lab, University of Washington",
     period: "Oct 2025 – Current",
     details: [
