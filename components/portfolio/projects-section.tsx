@@ -17,11 +17,11 @@ const projects: Project[] = [
     link: "https://devpost.com/software/terracast",
   },
   {
-    title: "Smart Skincare - Personalized Skincare Recommendation Tool",
+    title: "Lillasy - Personalized Skincare Recommendation Tool",
     description:
       "Built an interactive, ingredient-based recommendation tool that matches skincare products to user skin type/concerns and blends ingredient compatibility with real review signals. Includes a simple web UI and a reproducible pipeline with tests and CI; deployed via GitHub Pages.",
     tags: ["Python", "Recommendation Systems", "EDA", "CI/CD"],
-    link: "https://github.com/JungmoonHa/Data515_SmartSkincare",
+    link: "https://lillasy.com",
   },
   {
     title: "NFL Player Trajectory Prediction - Framework Comparison",
@@ -31,11 +31,18 @@ const projects: Project[] = [
     link: "https://github.com/otthree/NFL-Prediction-Model-Comparison",
   },
   {
+    title: "EY 2026 Open Science AI Challenge - Optimizing Clean Water Supply",
+    description:
+      "Built a target-specific modeling pipeline to predict water quality indicators (Total Alkalinity, Electrical Conductance, Dissolved Reactive Phosphorus) using multi-source geospatial and remote sensing data (Landsat, TerraClimate, ERA5, HydroRIVERS). Applied spatially-aware cross-validation (GroupKFold) and fold-safe preprocessing to minimize data leakage. Achieved leaderboard score of 0.4259.",
+    tags: ["Python", "Geospatial", "Feature Engineering", "Remote Sensing", "XGBoost"],
+    link: "https://github.com/whwan4570/EY2026-Optimizing-Clean-Water-Supply",
+  },
+  {
     title: "WatchDawg - Seattle Crime Analytics Dashboard",
     description:
       "Developed interactive web dashboard analyzing 17+ years of Seattle Police Department crime data (500K+ incidents) with real-time filtering and geospatial visualization capabilities. Engineered 11-stage data cleaning pipeline and memory-optimized architecture enabling stable deployment on resource-constrained environment (512MB RAM), reducing dataset noise by 35%. Deployed production application on Render with 99%+ uptime.",
     tags: ["EDA", "Data Visualization"],
-    link: "https://github.com/otthree/Watchdawg_app",
+    link: "https://watchdawg-app.onrender.com",
   },
 ]
 

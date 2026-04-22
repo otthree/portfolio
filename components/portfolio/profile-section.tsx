@@ -38,8 +38,7 @@ export function ProfileSection() {
         </p>
 
         <p className="mt-5 text-sm leading-relaxed text-foreground/85">
-        I am a Master's student in Data Science at the University of Washington with research interests spanning machine learning and deep learning. 
-        My work is driven by a long-term goal of becoming a research scientist who develops principled learning systems that generalize across domains and scales.
+        I am a Master's student in Data Science at the University of Washington with research interests spanning machine learning and deep learning. My work is driven by a long-term goal of becoming a research scientist who develops principled learning systems that generalize across domains and scales.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-foreground/85">
         Currently, I am conducting research on neuroimaging and cognitive aging, focusing on operationalizing cognitive reserve using deep learning on structural brain MRI. My pipeline spans 3D CNN-based Alzheimer's disease classification, residual-based cohort identification, and causal graph construction.
