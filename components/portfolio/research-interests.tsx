@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge"
-
 const interests = [
   "Deep Learning",
   "Machine Learning",
@@ -9,21 +7,20 @@ const interests = [
 
 export function ResearchInterests() {
   return (
-    <section id="research">
-      <h2 className="text-lg font-semibold tracking-tight text-foreground">
+    <div>
+      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
         Research Interests
-      </h2>
-      <div className="mt-3 flex flex-wrap gap-2">
+      </p>
+      <ul className="mt-4 flex flex-wrap gap-2">
         {interests.map((interest) => (
-          <Badge
+          <li
             key={interest}
-            variant="secondary"
-            className="text-xs font-normal px-3 py-1 bg-secondary text-secondary-foreground"
+            className="rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-[13px] text-white/70"
           >
             {interest}
-          </Badge>
+          </li>
         ))}
-      </div>
-    </section>
+      </ul>
+    </div>
   )
 }

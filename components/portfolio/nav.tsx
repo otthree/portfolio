@@ -4,16 +4,16 @@ import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Research", href: "#research" },
   { label: "News", href: "#news" },
-  { label: "Publications", href: "#publications" },
+  { label: "Résumé", href: "#resume" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
+  { label: "Say Hello", href: "#contact" },
 ]
 
 export function Nav() {
-  const [activeSection, setActiveSection] = useState("about")
+  const [activeSection, setActiveSection] = useState("home")
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function Nav() {
         const el = document.getElementById(sections[i])
         if (el) {
           const rect = el.getBoundingClientRect()
-          if (rect.top <= 100) {
+          if (rect.top <= 120) {
             setActiveSection(sections[i])
             break
           }
@@ -33,6 +33,7 @@ export function Nav() {
       }
     }
 
+    handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -40,23 +41,26 @@ export function Nav() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
+        "fixed top-0 z-50 w-full transition-colors duration-300",
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-background"
+          ? "bg-ink-900/85 backdrop-blur-md border-b border-white/10"
+          : "bg-transparent"
       )}
     >
-      <nav className="mx-auto max-w-2xl px-6 py-3" aria-label="Main navigation">
-        <ul className="flex items-center gap-1 overflow-x-auto">
+      <nav
+        className="max-w-full overflow-x-auto px-4 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden"
+        aria-label="Main navigation"
+      >
+        <ul className="mx-auto flex w-max items-center gap-0.5 py-4 sm:gap-2">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
                 className={cn(
-                  "block rounded-md px-3 py-1.5 text-xs transition-colors",
+                  "block whitespace-nowrap px-2 py-1.5 text-xs transition-colors sm:px-3 sm:text-[13px]",
                   activeSection === item.href.slice(1)
-                    ? "text-foreground font-medium bg-secondary"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-accent"
+                    : "text-white/55 hover:text-white"
                 )}
               >
                 {item.label}

@@ -23,22 +23,33 @@ const newsItems = [
 
 export function NewsSection() {
   return (
-    <section id="news">
-      <h2 className="text-lg font-semibold tracking-tight text-foreground">
-        News
-      </h2>
-      <ul className="mt-4 space-y-3">
-        {newsItems.map((item, index) => (
-          <li key={index} className="flex gap-4 text-sm">
-            <span className="shrink-0 w-[5.5rem] font-mono text-xs text-muted-foreground pt-0.5">
-              {item.date}
-            </span>
-            <span className="text-foreground/85 leading-relaxed">
-              {item.content}
-            </span>
-          </li>
-        ))}
-      </ul>
+    <section id="news" className="bg-ink-800 px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl">
+        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-accent">
+          02 &nbsp;/&nbsp; News
+        </p>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          What I&apos;ve been up to
+        </h2>
+
+        <ol className="relative mt-14 max-w-3xl">
+          <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-white/10" />
+          {newsItems.map((item) => (
+            <li key={item.date} className="relative pb-8 pl-8 last:pb-0">
+              <span
+                aria-hidden
+                className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent"
+              />
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-alt">
+                {item.date}
+              </p>
+              <p className="mt-2 text-[15px] leading-relaxed text-white/70">
+                {item.content}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   )
 }

@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react"
+
 interface Award {
   title: string
   org: string
@@ -16,34 +18,40 @@ const awards: Award[] = [
 
 export function AwardsSection() {
   return (
-    <section id="awards">
-      <h2 className="text-lg font-semibold tracking-tight text-foreground">
+    <div>
+      <h3 className="font-mono text-[11px] uppercase tracking-[0.35em] text-neutral-500">
         Awards
-      </h2>
-      <div className="mt-4 space-y-3">
-        {awards.map((award, index) => (
-          <div key={index} className="flex gap-4 text-sm">
-            <span className="shrink-0 w-[7.5rem] font-mono text-xs text-muted-foreground pt-0.5">
-              {award.date}
-            </span>
-            <div>
-              {award.link ? (
-                <a
-                  href={award.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-foreground text-sm hover:text-primary transition-colors"
-                >
-                  {award.title}
-                </a>
-              ) : (
-                <p className="font-medium text-foreground text-sm">{award.title}</p>
-              )}
-              <p className="text-xs text-muted-foreground">{award.org}</p>
-            </div>
+      </h3>
+      <div className="relative mt-8">
+        <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-neutral-200" />
+        {awards.map((award) => (
+          <div key={award.title} className="relative pb-8 pl-8 last:pb-0">
+            <span
+              aria-hidden
+              className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent-ink"
+            />
+            {award.link ? (
+              <a
+                href={award.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-baseline gap-1.5 text-lg font-semibold text-neutral-900 transition-colors hover:text-accent-ink"
+              >
+                {award.title}
+                <ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+              </a>
+            ) : (
+              <p className="text-lg font-semibold text-neutral-900">{award.title}</p>
+            )}
+            <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm text-neutral-600">
+              <span>{award.org}</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400">
+                {award.date}
+              </span>
+            </p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   )
 }

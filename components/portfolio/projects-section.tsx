@@ -1,5 +1,4 @@
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 interface Project {
   title: string
@@ -48,41 +47,39 @@ const projects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects">
-      <h2 className="text-lg font-semibold tracking-tight text-foreground">
-        Projects
-      </h2>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((project) => (
-          <a
-            key={project.title}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-lg border border-border bg-card p-4 hover:border-primary/30 transition-colors"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
-              <ExternalLink className="size-3.5 text-muted-foreground shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed line-clamp-2">
-              {project.description}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {project.tags.map((tag) => (
-                <Badge
-                  key={tag}
-                  variant="outline"
-                  className="text-[10px] font-normal px-2 py-0.5 text-muted-foreground border-border"
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </a>
-        ))}
+    <section id="projects" className="bg-ink-900 px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl">
+        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-accent">
+          04 &nbsp;/&nbsp; Projects
+        </p>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          Selected work
+        </h2>
+
+        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
+          {projects.map((project) => (
+            <a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col border border-white/10 bg-ink-800 p-7 transition-colors hover:border-accent/45 hover:bg-ink-700"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-base font-semibold leading-snug text-white transition-colors group-hover:text-accent">
+                  {project.title}
+                </h3>
+                <ArrowUpRight className="mt-0.5 size-4 shrink-0 text-white/30 transition-colors group-hover:text-accent" />
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-white/55 line-clamp-4">
+                {project.description}
+              </p>
+              <p className="mt-auto pt-6 font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-accent-alt/70">
+                {project.tags.join("  \u00b7  ")}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   )

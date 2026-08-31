@@ -39,51 +39,65 @@ const experience = [
 
 export function EducationSection() {
   return (
-    <section id="experience" className="space-y-6">
+    <>
       <div>
-        <h2 className="text-lg font-semibold tracking-tight text-foreground">
-          Education
-        </h2>
-        <div className="mt-4 space-y-4">
-          {education.map((item, index) => (
-            <div key={index} className="flex gap-4 text-sm">
-              <span className="shrink-0 w-[7.5rem] font-mono text-xs text-muted-foreground pt-0.5">
-                {item.period}
-              </span>
-              <div>
-                <p className="font-medium text-foreground text-sm">{item.degree}</p>
-                <p className="text-xs text-muted-foreground">{item.school}{item.location ? `, ${item.location}` : ""}</p>
-              </div>
+        <h3 className="font-mono text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+          Experience
+        </h3>
+        <div className="relative mt-8">
+          <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-neutral-200" />
+          {experience.map((item) => (
+            <div key={item.role + item.period} className="relative pb-10 pl-8 last:pb-0">
+              <span
+                aria-hidden
+                className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent-ink"
+              />
+              <p className="text-lg font-semibold text-neutral-900">{item.role}</p>
+              <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm text-neutral-600">
+                <span>{item.org}</span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400">
+                  {item.period}
+                </span>
+              </p>
+              <ul className="mt-4 space-y-2">
+                {item.details.map((d) => (
+                  <li key={d} className="relative pl-5 text-sm leading-relaxed text-neutral-600">
+                    <span
+                      aria-hidden
+                      className="absolute left-0 top-[9px] size-1 rounded-full bg-accent-ink"
+                    />
+                    {d}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold tracking-tight text-foreground">
-          Experience
-        </h2>
-        <div className="mt-4 space-y-4">
-          {experience.map((item, index) => (
-            <div key={index} className="flex gap-4 text-sm">
-              <span className="shrink-0 w-[7.5rem] font-mono text-xs text-muted-foreground pt-0.5">
-                {item.period}
-              </span>
-              <div>
-                <p className="font-medium text-foreground text-sm">{item.role}</p>
-                <p className="text-xs text-muted-foreground">{item.org}</p>
-                {item.details?.length ? (
-                  <ul className="mt-1.5 space-y-1 text-xs text-muted-foreground list-disc list-inside">
-                    {item.details.map((d, i) => (
-                      <li key={i} className="leading-relaxed">{d}</li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
+        <h3 className="font-mono text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+          Education
+        </h3>
+        <div className="relative mt-8">
+          <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-neutral-200" />
+          {education.map((item) => (
+            <div key={item.degree} className="relative pb-8 pl-8 last:pb-0">
+              <span
+                aria-hidden
+                className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent-ink"
+              />
+              <p className="text-lg font-semibold text-neutral-900">{item.degree}</p>
+              <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm text-neutral-600">
+                <span>{item.school}, {item.location}</span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400">
+                  {item.period}
+                </span>
+              </p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </>
   )
 }
