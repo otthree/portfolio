@@ -1,15 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono, IBM_Plex_Serif } from 'next/font/google'
+import { DM_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" })
-const ibmPlexSerif = IBM_Plex_Serif({
+const dmMono = DM_Mono({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-ibm-plex-serif",
+  variable: "--font-dm-mono",
 })
 
 export const metadata: Metadata = {
@@ -40,11 +37,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${ibmPlexSerif.variable}`}
-    >
-      <body className="font-sans antialiased">
+    <html lang="en" className={dmMono.variable}>
+      <body>
         {children}
         <Analytics />
       </body>

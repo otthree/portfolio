@@ -1,67 +1,35 @@
-import { Mail, Github, Linkedin, FileText, ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
-const socialLinks = [
-  { icon: Mail, href: "mailto:dlee23@uw.edu", label: "Email" },
-  { icon: Github, href: "https://github.com/otthree", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/dae-hyun-lee-1a9461254/", label: "LinkedIn" },
-  { icon: FileText, href: `${basePath}/cv.pdf`, label: "CV" },
-]
-
 export function HeroSection() {
   return (
-    <section
-      id="home"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-ink-800 px-6 text-center"
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_38%,rgba(17,173,181,0.16),transparent_62%)]"
+    <header>
+      <Image
+        src={`${basePath}/images/daehyun.jpg`}
+        alt="Dae Hyun Lee"
+        width={160}
+        height={240}
+        className="mb-8"
+        priority
       />
 
-      <div className="relative">
-        <h1 className="text-[clamp(2.75rem,9vw,5.5rem)] font-semibold leading-[1.05] tracking-tight text-white">
-          Hello, I&apos;m Dae Hyun.
-        </h1>
+      <h1>Dae Hyun Lee</h1>
 
-        <p className="mx-auto mt-6 max-w-2xl font-serif text-lg leading-relaxed text-white/55 sm:text-xl">
-          M.S. student in Data Science at the University of Washington, researching
-          deep learning for neuroimaging and cognitive aging.
-        </p>
+      <p className="muted mt-3 mb-0">
+        UW MSDS &rsquo;27 | RA @ Roy Lab
+      </p>
 
-        <div className="mx-auto mt-10 h-px w-24 bg-white/15" />
+      <p className="mt-6 mb-4">
+        hi! I build deep learning models for neuroimaging. At the Roy Lab I work on
+        segmentation and classification of structural brain MRI, measuring heterogeneity
+        at the patient level.
+      </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
-            Let&apos;s connect
-          </span>
-          <div className="flex items-center gap-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.label}
-                title={link.label}
-                className="text-white/60 transition-colors hover:text-accent"
-              >
-                <link.icon className="size-5" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <a
-        href="#about"
-        aria-label="Scroll to About"
-        className="absolute bottom-10 flex flex-col items-center gap-2 text-white/40 transition-colors hover:text-accent"
-      >
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em]">Scroll down</span>
-        <ChevronDown className="size-4 animate-nudge" />
-      </a>
-    </section>
+      <p className="mb-0">
+        I also build machine learning services end-to-end across a range of domains, from
+        raw data to something deployed.
+      </p>
+    </header>
   )
 }

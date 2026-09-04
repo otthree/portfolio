@@ -1,103 +1,61 @@
-const education = [
+const experience = [
   {
-    degree: "M.S. in Data Science (Expected)",
-    school: "University of Washington",
-    location: "Seattle, WA",
-    period: "Sep 2025 – Mar 2027",
+    role: "student fellow",
+    org: "databricks",
+    period: "may 2026 – present",
+    note: "1 of 39 selected from 5,000+ applicants",
   },
   {
-    degree: "B.A. in Mathematics",
-    school: "University of Washington",
-    location: "Seattle, WA",
-    period: "Sep 2019 – Mar 2025",
+    role: "research assistant",
+    org: "roy lab, university of washington",
+    period: "oct 2025 – present",
+    note: "improving segmentation and classification performance with deep learning on neuroimaging",
+  },
+  {
+    role: "research intern",
+    org: "snu vldb lab, seoul national university",
+    period: "jun 2024 – sep 2024",
+    note: "z-score embedding compression: 1,536 to 64 dims, 95%+ similarity retained",
   },
 ]
 
-const experience = [
+const education = [
   {
-    role: "Research Assistant",
-    org: "Roy Lab, University of Washington",
-    period: "Oct 2025 – Current",
-    details: [
-      "Designing deep learning frameworks to operationalize cognitive reserve from multimodal neuroimaging data, addressing the fundamental challenge of quantifying latent cognitive resilience from observable clinical markers",
-      "Conducting systematic literature review of cognitive reserve measurement methodologies, critically evaluating statistical approaches and implementing baseline models (linear regression, XGBoost) for benchmarking",
-      "Training 3D convolutional neural networks on ADNI dataset (4,508 subjects with structural MRI and 127 clinical features) for three-way Alzheimer's disease classification (CN/MCI/AD), optimizing model architecture for diagnostic accuracy",
-    ],
+    degree: "m.s. data science",
+    school: "university of washington",
+    period: "sep 2025 – mar 2027",
   },
   {
-    role: "Research Intern",
-    org: "SNU VLDB Lab, Seoul National University",
-    period: "Jun 2024 – Sep 2024",
-    details: [
-      "Proposed and validated a z-score-based dimension reduction technique for embedding vectors, supported by mathematical formulation and statistical analysis",
-      "Achieved 96% dimensionality reduction (1536→64 dimensions) while preserving 95%+ similarity accuracy, improving K-NN query efficiency",
-      "Integrated algorithm into HNSW indexing system and conducted performance benchmarking using OpenAI embedding datasets (100K+ vectors)",
-      "Authored internal technical reports including statistical analysis and algorithmic benchmarking",
-    ],
+    degree: "b.a. mathematics",
+    school: "university of washington",
+    period: "sep 2019 – mar 2025",
   },
 ]
 
 export function EducationSection() {
   return (
     <>
-      <div>
-        <h3 className="font-mono text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-          Experience
-        </h3>
-        <div className="relative mt-8">
-          <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-neutral-200" />
-          {experience.map((item) => (
-            <div key={item.role + item.period} className="relative pb-10 pl-8 last:pb-0">
-              <span
-                aria-hidden
-                className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent-ink"
-              />
-              <p className="text-lg font-semibold text-neutral-900">{item.role}</p>
-              <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm text-neutral-600">
-                <span>{item.org}</span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400">
-                  {item.period}
-                </span>
-              </p>
-              <ul className="mt-4 space-y-2">
-                {item.details.map((d) => (
-                  <li key={d} className="relative pl-5 text-sm leading-relaxed text-neutral-600">
-                    <span
-                      aria-hidden
-                      className="absolute left-0 top-[9px] size-1 rounded-full bg-accent-ink"
-                    />
-                    {d}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ul>
+        {experience.map((item) => (
+          <li key={item.role + item.period}>
+            {item.role} @ {item.org}
+            <span className="muted">&nbsp;&nbsp;// {item.period}</span>
+            <ul>
+              <li>{item.note}</li>
+            </ul>
+          </li>
+        ))}
+      </ul>
 
-      <div>
-        <h3 className="font-mono text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-          Education
-        </h3>
-        <div className="relative mt-8">
-          <div aria-hidden className="absolute left-0 top-2 bottom-2 w-px bg-neutral-200" />
-          {education.map((item) => (
-            <div key={item.degree} className="relative pb-8 pl-8 last:pb-0">
-              <span
-                aria-hidden
-                className="absolute left-0 top-[7px] size-2 -translate-x-1/2 rounded-full bg-accent-ink"
-              />
-              <p className="text-lg font-semibold text-neutral-900">{item.degree}</p>
-              <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm text-neutral-600">
-                <span>{item.school}, {item.location}</span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400">
-                  {item.period}
-                </span>
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <h3>education</h3>
+      <ul>
+        {education.map((item) => (
+          <li key={item.degree}>
+            {item.degree} @ {item.school}
+            <span className="muted">&nbsp;&nbsp;// {item.period}</span>
+          </li>
+        ))}
+      </ul>
     </>
   )
 }
