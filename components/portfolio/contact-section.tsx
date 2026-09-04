@@ -11,12 +11,8 @@ const links = [
 
 export function ContactSection() {
   return (
-    <section id="contact">
-      <h2>contact</h2>
-      <p>
-        Always happy to discuss representation learning, causal inference, or clinical
-        neuroscience, or to hear about a problem hiding in high-dimensional data.
-      </p>
+    <section id="elsewhere">
+      <h2>elsewhere</h2>
       <ul>
         {links.map((link) => (
           <li key={link.label}>

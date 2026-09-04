@@ -10,15 +10,15 @@ const projects: Project[] = [
   },
   {
     title: "TerraCast, Databricks x UW Hackathon (1st Place)",
-    link: "https://devpost.com/software/terracast",
+    link: "https://github.com/HumfDev/TerraCast",
   },
   {
     title: "Lillasy, Personalized Skincare Recommendation Tool",
-    link: "https://lillasy.com",
+    link: "https://github.com/JungmoonHa/Data515_SmartSkincare",
   },
   {
     title: "NFL Player Trajectory Prediction, Framework Comparison",
-    link: "https://github.com/otthree/NFL-Prediction-Model-Comparison",
+    link: "https://github.com/whwan4570/NFL-Prediction-Model-Comparison",
   },
   {
     title: "EY 2026 Open Science AI Challenge, Optimizing Clean Water Supply",
@@ -26,7 +26,7 @@ const projects: Project[] = [
   },
   {
     title: "WatchDawg, Seattle Crime Analytics Dashboard",
-    link: "https://watchdawg-app.onrender.com",
+    link: "https://github.com/whwan4570/Watchdawg_app",
   },
 ]
 

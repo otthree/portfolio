@@ -1,9 +1,18 @@
-const experience = [
+interface Experience {
+  role: string
+  org: string
+  period: string
+  note: string
+  noteLink?: string
+}
+
+const experience: Experience[] = [
   {
     role: "student fellow",
     org: "databricks",
     period: "may 2026 – present",
     note: "1 of 39 selected from 5,000+ applicants",
+    noteLink: "https://www.databricks.com/blog/announcing-databricks-student-fellows",
   },
   {
     role: "research assistant",
@@ -41,7 +50,15 @@ export function EducationSection() {
             {item.role} @ {item.org}
             <span className="muted">&nbsp;&nbsp;// {item.period}</span>
             <ul>
-              <li>{item.note}</li>
+              <li>
+                {item.noteLink ? (
+                  <a href={item.noteLink} target="_blank" rel="noopener noreferrer">
+                    {item.note}
+                  </a>
+                ) : (
+                  item.note
+                )}
+              </li>
             </ul>
           </li>
         ))}
