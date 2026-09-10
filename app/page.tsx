@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/portfolio/hero-section"
 import { ResumeSection } from "@/components/portfolio/resume-section"
 import { ProjectsSection } from "@/components/portfolio/projects-section"
-import { ContactSection } from "@/components/portfolio/contact-section"
+import { Footer } from "@/components/portfolio/footer"
 
 export default function HomePage() {
   return (
@@ -11,8 +11,7 @@ export default function HomePage() {
       <ResumeSection />
       <hr />
       <ProjectsSection />
-      <hr />
-      <ContactSection />
+      <Footer />
     </main>
   )
 }

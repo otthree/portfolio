@@ -3,7 +3,7 @@ interface Experience {
   org: string
   period: string
   note: string
-  noteLink?: string
+  link?: string
 }
 
 const experience: Experience[] = [
@@ -12,7 +12,7 @@ const experience: Experience[] = [
     org: "databricks",
     period: "may 2026 – present",
     note: "1 of 39 selected from 5,000+ applicants",
-    noteLink: "https://www.databricks.com/blog/announcing-databricks-student-fellows",
+    link: "https://www.databricks.com/blog/announcing-databricks-student-fellows",
   },
   {
     role: "research assistant",
@@ -47,18 +47,16 @@ export function EducationSection() {
       <ul>
         {experience.map((item) => (
           <li key={item.role + item.period}>
-            {item.role} @ {item.org}
+            {item.link ? (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.role} @ {item.org}
+              </a>
+            ) : (
+              `${item.role} @ ${item.org}`
+            )}
             <span className="muted">&nbsp;&nbsp;// {item.period}</span>
             <ul>
-              <li>
-                {item.noteLink ? (
-                  <a href={item.noteLink} target="_blank" rel="noopener noreferrer">
-                    {item.note}
-                  </a>
-                ) : (
-                  item.note
-                )}
-              </li>
+              <li>{item.note}</li>
             </ul>
           </li>
         ))}

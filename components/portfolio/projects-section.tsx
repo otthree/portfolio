@@ -43,6 +43,7 @@ export function ProjectsSection() {
           </li>
         ))}
       </ul>
+      <p className="muted mt-4 mb-0">and some private repositories...</p>
     </section>
   )
 }
