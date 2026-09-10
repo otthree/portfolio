@@ -16,7 +16,7 @@ const experience: Experience[] = [
   },
   {
     role: "research assistant",
-    org: "roy lab, university of washington",
+    org: "roy lab",
     period: "oct 2025 – present",
     note: "improving segmentation and classification performance with deep learning on neuroimaging",
   },
@@ -24,7 +24,7 @@ const experience: Experience[] = [
     role: "research intern",
     org: "snu vldb lab, seoul national university",
     period: "jun 2024 – sep 2024",
-    note: "z-score embedding compression: 1,536 to 64 dims, 95%+ similarity retained",
+    note: "training-free dimension selection for faster vector search: 1,536 to 64 dims, 95% top-k overlap",
   },
 ]
 

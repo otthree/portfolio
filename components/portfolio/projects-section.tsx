@@ -5,23 +5,19 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "CarePilot, Evidence-aware Healthcare Facility Referral Copilot",
+    title: "CarePilot, LLM Agent for Real-time Hospital Referral",
     link: "https://github.com/HumfDev/CarePilot",
   },
   {
-    title: "TerraCast, Databricks x UW Hackathon (1st Place)",
+    title: "TerraCast, ML-based Crop Yield Forecasting on Databricks (1st Place, Hackathon)",
     link: "https://github.com/HumfDev/TerraCast",
   },
   {
-    title: "Lillasy, Personalized Skincare Recommendation Tool",
+    title: "Smart Skincare, KNN Recommendation Engine",
     link: "https://github.com/JungmoonHa/Data515_SmartSkincare",
   },
   {
-    title: "NFL Player Trajectory Prediction, Framework Comparison",
-    link: "https://github.com/whwan4570/NFL-Prediction-Model-Comparison",
-  },
-  {
-    title: "EY 2026 Open Science AI Challenge, Optimizing Clean Water Supply",
+    title: "EY 2026 Clean Water Challenge, Geospatial ML for Water Quality Prediction",
     link: "https://github.com/whwan4570/EY2026-Optimizing-Clean-Water-Supply",
   },
   {
