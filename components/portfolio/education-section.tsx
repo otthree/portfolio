@@ -16,7 +16,7 @@ const experience: Experience[] = [
   },
   {
     role: "research assistant",
-    org: "roy lab",
+    org: "roy lab, university of washington",
     period: "oct 2025 – present",
     note: "improving segmentation and classification performance with deep learning on neuroimaging",
   },
